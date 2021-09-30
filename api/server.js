@@ -5,6 +5,10 @@ const server = express();
 
 server.use(express.json());
 
+server.get("/", (req, res) => {
+  res.json("Hello")
+})
+
 server.get("/api/users", async (req, res) => {
   try {
     const users = await User.find()
