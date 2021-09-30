@@ -6,7 +6,7 @@ const server = express();
 server.use(express.json());
 
 server.get("/", (req, res) => {
-  res.json("Hello")
+  res.json("<h1>Hello</h>")
 })
 
 server.get("/api/users", async (req, res) => {
